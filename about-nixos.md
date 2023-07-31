@@ -21,6 +21,10 @@ JP:はるき
 ![bg](https://raw.githubusercontent.com/NixOS/nixos-artwork/ac04f06feb980e048b4ab2a7ca32997984b8b5ae/wallpapers/nix-wallpaper-nineish-dark-gray.svg)
 
 ---
+<!--
+_footer: ""
+_header: ""
+-->
 
 # About me...
 

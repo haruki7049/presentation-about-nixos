@@ -1,11 +1,17 @@
 ---
+marp: true
 theme: default
 class: lead
 size: 16:9
 paginate: true
 backgroundColor: #fff
-color: white
+color: black
+header: "How to use NixOS"
+footer: "haruki7049 : https://github.com/haruki7049/"
 ---
+<!--
+_color: white
+-->
 
 # The Presentation about NixOS by haruki7049
 
@@ -15,9 +21,6 @@ JP:はるき
 ![bg](./nix-wallpaper-recursive.png)
 
 ---
-<!--
-color: black
--->
 
 # About me...
 
@@ -98,5 +101,98 @@ in
 
 # 環境を汚さずにプログラミングをする環境を作れる！！
 
-先ほど書いた程度なら、  
+先ほど書いた程度ならば、下記のようにコマンドを打っても良い。
+```bash
 nix-shell -p cargo rustc rustfmt rust-analyzer
+```
+しかし、Nixでのパッケージを作るためには、必ずnix-langを書かなくてはならない。その分野はこのスライドでは省略する。
+
+---
+
+# NixOSでのNixの使い道
+
+NixOSでは、```/etc/nixos/configuration.nix```ファイルを編集して、OS自身の設定をする。近いようなものだと、FreeBSD等の、```/etc/rc.conf```ファイルとかと似たようなものだ。
+
+---
+
+## For example
+
+一部分を記載する。
+
+```nix:configuration.nix
+services.xserver = {
+  enable = true;
+  libinput.enable = true;
+  layout = "us";
+  windowManager.i3.enable = true;
+  displayManager.startx.enable = true;
+}
+```
+
+---
+<!--
+_footer: ""
+_header: ""
+-->
+
+## Second example
+
+先ほどのコードと同様の意味を持つ、同様の部分のコードを記載。
+
+```nix:configuration.nix
+services = {
+  xserver = {
+    enable = true;
+    libinput = {
+      enable = true;
+    };
+    layout = "us";
+    windowManager = {
+      i3 = {
+        enable = true;
+      };
+    };
+    displayManager = {
+      startx = {
+        enable = true;
+      };
+    };
+  };
+};
+```
+
+---
+
+## Third example
+
+今度も同様。結構記述の自由度が高いと感じるかもしれない。
+
+```nix:configuration.nix
+services.xserver.enable = true;
+services.xserver.libinput.enable = true;
+services.xserver.layout = "us";
+services.xserver.windowManager.i3.enable = true;
+services.xserver.displayManager.startx.enable = true;
+```
+
+---
+
+# そんなオプションたち、どこで知るの？
+
+[https://search.nixos.org/options](https://search.nixos.org/options)
+に乗ってる。というか検索出来る。検索すべき。
+
+---
+
+# インストール編は省略…
+
+尺的に仕方がない…
+
+---
+<!--
+_color: white
+-->
+
+# おしまい
+
+![bg](./nix-wallpaper-recursive.png)

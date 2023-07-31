@@ -18,7 +18,7 @@ _color: white
 EN:haruki7049
 JP:はるき
 
-![bg](./nix-wallpaper-recursive.png)
+![bg](https://raw.githubusercontent.com/NixOS/nixos-artwork/ac04f06feb980e048b4ab2a7ca32997984b8b5ae/wallpapers/nix-wallpaper-nineish-dark-gray.svg)
 
 ---
 
@@ -199,4 +199,4 @@ _color: white
 
 # おしまい
 
-![bg](./nix-wallpaper-recursive.png)
+![bg](https://raw.githubusercontent.com/NixOS/nixos-artwork/ac04f06feb980e048b4ab2a7ca32997984b8b5ae/wallpapers/nix-wallpaper-nineish-dark-gray.svg)

@@ -186,7 +186,11 @@ services.xserver.displayManager.startx.enable = true;
 
 # インストール編は省略…
 
-尺的に仕方がない…
+尺的に仕方がない…  
+Youtubeにて、自分が作った、超スピードでインストールを解説する動画が存在するのでそちらを紹介。人工音声が苦手な人は注意。
+[https://youtu.be/Z8Gx1-bW8rI](https://youtu.be/Z8Gx1-bW8rI)
+一応、公式のドキュメントも紹介。当然ながら全て英語。
+[https://nixos.org/manual/nixos/stable/](https://nixos.org/manual/nixos/stable/)
 
 ---
 <!--
